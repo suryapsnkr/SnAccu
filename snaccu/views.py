@@ -140,7 +140,7 @@ class FriendReject(APIView):
 class FriendList(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
-    def get(self, request, n):
+    def get(self, request):
         fr = []
         if Friend.objects.filter(fuser = request.user, is_active = True, is_friend = True).exists():
             f = Friend.objects.filter(fuser = request.user)
