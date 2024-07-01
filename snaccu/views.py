@@ -35,9 +35,12 @@ class GetUser(APIView):
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
     def get(self, request, n):
-        users = User.objects.all()[(n-1)*10:n*10]
-        serializer = UserSerializer(users, many=True)
-        return Response(serializer.data)
+        if n<=0:
+            return Response({"Message": "Negative Indexing is Not Supported"})
+        else:    
+            users = User.objects.all()[(n-1)*10:n*10]
+            serializer = UserSerializer(users, many=True)
+            return Response(serializer.data)
     
     def patch(self, request):
         serializer = UserSerializer(request.user, data=request.data, partial = True)
