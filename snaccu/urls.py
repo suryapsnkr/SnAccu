@@ -4,7 +4,7 @@ from snaccu.views import SignupUser, LoginUser, GetUser, QuerySearch, FriendRequ
 
 urlpatterns = [
     path('changePassword', ChangePassword.as_view(), name='changePassword'),
-    path('friendList/<int:n>', FriendList.as_view(), name='friendList'),
+    path('friendList', FriendList.as_view(), name='friendList'),
     path('getCookie', GetCSRFToken.as_view(), name='getCookie'),
     path('logoutUser', LogoutUser.as_view(), name='logoutUser'),
     path('friendReject', FriendReject.as_view(), name='friendReject'),
