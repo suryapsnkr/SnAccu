@@ -7,4 +7,4 @@ Users Can Change Password Using API: http://127.0.0.1:8000/changePassword<br>
 Users Can Send Friend Request To Users Using API(Every User Can Not Send More Than 3 Request Within a Minute): http://127.0.0.1:8000/friendRequest<br>
 Users Can Accept Friend Requet From Users Using API: http://127.0.0.1:8000/friendAccept<br>
 Users Can Reject Friend Requet From Users Using API: http://127.0.0.1:8000/friendReject<br>
-Users Can Get All Friends List Using API: http://127.0.0.1:8000/friendList/1<br>
+Users Can Get All Friends List Using API: http://127.0.0.1:8000/friendList<br>
